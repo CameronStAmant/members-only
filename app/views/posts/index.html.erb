@@ -4,7 +4,7 @@
   <tbody>
     <% @post.each do |p| %>
       <tr>
-        <td>Author: <%= @user.find(p.user.id).name %> Title: <%= p.title %></td>
+        <td>Author: <% if user_signed_in? %><%= @user.find(p.user.id).name %> <% else %> Login to see <% end %> Title: <%= p.title %></td>
       </tr>
     <% end %>
   </tbody>
