@@ -1,0 +1,9 @@
+<h1>Create a post</h1>
+
+<%= form_with model: @post, url: "/posts", method: "post" do |f| %>
+  <%= label_tag(:title, "Title") %>
+  <%= f.text_field :title %><br><br>
+  <%= label_tag(:body, "Body") %>
+  <%= f.text_area :body %><br><br>
+  <%= submit_tag("Post") %>
+<% end %>

@@ -1,0 +1,11 @@
+<h1>List of posts</h1>
+
+<table>
+  <tbody>
+    <% @post.each do |p| %>
+      <tr>
+        <td>Author: <%= @user.find(p.user.id).name %> Title: <%= p.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
